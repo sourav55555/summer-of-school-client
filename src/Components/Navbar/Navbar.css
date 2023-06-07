@@ -1,0 +1,9 @@
+.icon{
+    line-height: 1rem;
+}
+
+.active{
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding: 7px 4px;
+}
