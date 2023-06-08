@@ -62,7 +62,7 @@ const Navbar = () => {
           { user ? <div className="flex gap-6 items-center ">
             
             <Link to="/profile">
-              <img className="h-10 w-10 rounded-full border-2 border-[#d29e49]" src={user?.photoURL} alt="" />
+              <img className="h-10 w-10 rounded-full border-2 border-[#d29e49]" src={user.photoURL} alt="" />
             </Link>
 
               <button onClick={() => logout()} className="px-4 py-2 text-black bg-[#fb6d63] border-2 border-black ">Logout</button>

@@ -12,9 +12,7 @@ import { useContext } from "react";
 
 const Signup = () => {
 
-    const {createUser, googleLog} = useContext(AuthContext);
-
-    console.log(createUser, "create user");
+    const {user, createUser, googleLog, loading} = useContext(AuthContext);
 
     const [secureUrl] = useAxiosSecure();
 
@@ -44,6 +42,7 @@ const Signup = () => {
                     navigate("/");
                 })
             })
+            .catch(error => toast.error(`${error.message}`))
 
           
         })
@@ -53,18 +52,30 @@ const Signup = () => {
     }
   };
 
-  const handleGoogle = ()=>{
-    googleLog()
-    .then((data)=> {
-      const userData = { name: data.displayName, email: data.email, photo: data.photoURL, role: "user"}
 
-      console.log(userData, "google user");
+  // const updateGoogleUser = () =>{
 
-      secureUrl.post("/user", userData)
+   /*  if(loading){
+      return
+    }
+   else{
+    const userData = { name: user.displayName, email: user.email, photo: user.photoURL, role: "user"}
+    console.log(userData, "google user");
+   } */
+
+    /* secureUrl.post("/user", userData)
       .then(() => {
           toast.success('Successfully registered.');
           navigate("/");
-      })
+      }) */
+  // }
+
+
+  const handleGoogle = ()=>{
+    googleLog()
+    .then((data)=> {
+        // updateGoogleUser();
+        // console.log(data.email, "google email")
     })
   }
 
