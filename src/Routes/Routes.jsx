@@ -4,6 +4,7 @@ import {
   } from "react-router-dom";
 import Dashboard from "../Layout/Dashboard";
 import Main from "../Layout/Main";
+import ManageClass from "../Pages/DashboardPages/ManageClasses/ManageClass";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Signup/Signup";
@@ -32,9 +33,10 @@ const router = createBrowserRouter([
       element: <Dashboard/>,
       children: [
         {
-          path: "manageclasses",
-          element: <Ma
+          path: "manageclass",
+          element: <ManageClass/>
         }
+        
       ]
     }
 ]);
