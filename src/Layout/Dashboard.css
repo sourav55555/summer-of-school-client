@@ -1,0 +1,15 @@
+.dashboard{
+    background-image: url('/src/assets//navbg/sun-tornado-3svg.png');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+
+.actived{
+    background-color: white;
+    padding: .75rem;
+    color: black;
+    padding-right: 0;
+    width: 100%;
+    display: block;
+    border-radius: .9rem 0rem 0rem .9rem;
+}
