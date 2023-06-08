@@ -80,6 +80,41 @@
   right: -9px;
 }
 
+.button3{
+  padding: .8rem 4rem;
+  background:  #526D82;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  transition: all .2s linear;
+}
+
+.button3::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #9DB2BF;
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  z-index: -1;
+  transition: all .2s linear;
+}
+
+.button3:hover:after{
+  top: -9px;
+  right: -9px;
+}
+
 .maxWidth{
   max-width: 1920px;
+}
+
+
+.page-header{
+  background-image: url(/src/assets/liquid-cheese1-svg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
