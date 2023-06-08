@@ -4,15 +4,33 @@ import image from "../../assets/10.jpg";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import bannerimg from '../../assets/bg-images/pngegg (3).png';
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { toast, Toaster } from "react-hot-toast";
 
 const Login = () => {
+
+  const {login, googleLog} = useContext(AuthContext);
+
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    login(data.email, data.password)
+    .then(()=>{
+      toast.success('Login Successful')
+    })
+    .catch(error => toast.error(`${error.message}`))
+  };
+
+  const handleGoogle = ()=>{
+    googleLog()
+    .then(()=> toast.success('Login Successful'))
+  }
 
   return (
     <div>
@@ -68,13 +86,14 @@ const Login = () => {
               </Link>
             </p>
             <div className="parent-btn mx-auto">
-              <button className="button3 flex items-center gap-3">
+              <button onClick={handleGoogle} className="button3 flex items-center gap-3">
                 <img className="h-6 w-6" src={google} alt="" /> Google Login
               </button>
             </div>
           </div>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 };
