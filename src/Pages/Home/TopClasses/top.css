@@ -1,0 +1,15 @@
+.top{
+    transform: translate(-50%, -50%);
+}
+
+.bgclass{
+    background-image: url("/src/assets/classbg/blob-haikei\(1\).png");
+    background-size: 100% 100%;
+}
+
+.parallel{
+    background-image: url("/src/assets/parallal/Foto-con-scritta-summercamp-img.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
