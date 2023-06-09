@@ -4,8 +4,8 @@ import Class from "./Class";
 
 const ManageClass = () => {
 
-    const [isAdmin, isLoading] = useAdmin();
-    console.log(isAdmin,isLoading, "form dasheasdjf");
+    // const [isAdmin, isLoading] = useAdmin();
+    // console.log(isAdmin,isLoading, "form dasheasdjf");
 
     const [classes, refetch] = useClasses();
 

@@ -27,7 +27,7 @@ const Signup = () => {
   const onSubmit = (data) => {
     // console.log(data);
     if(data.password == data.confirm_password){
-        const userData = {...data, role:"user"};
+        const userData = {...data, role:"student"};
         
         createUser(data.email, data.password)
         .then( result => {
@@ -134,7 +134,7 @@ const Signup = () => {
               <div className="flex gap-3 w-full items-center justify-center">
               <input
                 className="w-1/2 px-6 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]"
-                {...register("number", { required: true })}
+                {...register("phone", { required: true })}
                 placeholder="Enter Phone Number"
               />
               <select className="w-1/2 px-6 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]" {...register("gender")}>
@@ -156,7 +156,7 @@ const Signup = () => {
                 placeholder="Enter Address Info"
               />
 
-            {/* {errors.password && <span className="text-sm text-red-600 my-2">Password have minimum 6 characters, one uppercase letter, one special character.</span>} */}
+            {errors.password && <span className="text-sm text-red-600 my-2">Password must have minimum 6 characters, one uppercase letter, one special character.</span>}
 
 
               <div className="parent-btn mt-6">

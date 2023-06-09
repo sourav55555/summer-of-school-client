@@ -1,6 +1,6 @@
 
 
-const useInstructor = () => {
+const Myclasses = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const useInstructor = () => {
     );
 };
 
-export default useInstructor;
+export default Myclasses;
