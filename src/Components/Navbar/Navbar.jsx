@@ -17,6 +17,8 @@ const Navbar = () => {
 
   const {user, logout} = useContext(AuthContext);
 
+  const [toggle, setToggle] = useState(false);
+
   useEffect(()=>{
     if(isAdmin){
 
@@ -25,6 +27,9 @@ const Navbar = () => {
     }
     else if(isInstructor){
       setDashboardRout("addclass")
+    }
+    else{
+      setDashboardRout("myselect")
     }
   }, [user, isAdmin, isInstructor])
 
@@ -66,7 +71,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 onClick={() => setToggle(!toggle)}
-                to="/classes"
+                to="classes"
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
                 Classes

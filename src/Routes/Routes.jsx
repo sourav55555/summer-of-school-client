@@ -4,10 +4,13 @@ import {
   } from "react-router-dom";
 import Dashboard from "../Layout/Dashboard";
 import Main from "../Layout/Main";
+import Classes from "../Pages/Classes/Classes";
 import AddClass from "../Pages/DashboardPages/AddClass/AddClass";
 import ManageClass from "../Pages/DashboardPages/ManageClasses/ManageClass";
 import ManageUsers from "../Pages/DashboardPages/ManageUsers/ManageUsers";
 import Myclasses from "../Pages/DashboardPages/MyClasses/Myclasses";
+import Myenroll from "../Pages/DashboardPages/Myenroll/Myenroll";
+import Myselect from "../Pages/DashboardPages/Myselect/Myselect";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Signup/Signup";
@@ -30,6 +33,10 @@ const router = createBrowserRouter([
         {
           path: "/register",
           element: <Signup/>
+        },
+        {
+          path: "/classes",
+          element: <Classes/>
         }
       ]
     },
@@ -52,6 +59,14 @@ const router = createBrowserRouter([
         {
           path: "myclasses",
           element: <Myclasses/>
+        },
+        {
+          path: "myselect",
+          element: <Myselect/>
+        },
+        {
+          path: "myenroll",
+          element: <Myenroll/>
         }
         
       ]

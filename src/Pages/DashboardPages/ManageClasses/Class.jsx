@@ -83,7 +83,7 @@ const Class = ({ data }) => {
         </div>
         <div className="flex items-center gap-6 font-semibold">
           <button
-            onClick={() => handleStatus("approve")}
+            onClick={() => handleStatus("approved")}
             disabled={disable}
             className="px-4 py-2 rounded-xl bg-green-300 disabled:opacity-40"
           >
