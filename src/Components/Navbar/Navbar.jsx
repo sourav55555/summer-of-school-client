@@ -1,12 +1,33 @@
+import { useState } from "react";
+import { useEffect } from "react";
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import icon from "../../assets/icons/football.png";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import useAdmin from "../../Hooks/useAdmin";
+import useIsInstructor from "../../Hooks/useIsInstructor";
 import "./Navbar.css";
 
 const Navbar = () => {
 
+  const [isAdmin] = useAdmin();
+  const [isInstructor] = useIsInstructor();
+
+  const [dashboardRout, setDashboardRout] = useState("");
+
   const {user, logout} = useContext(AuthContext);
+
+  useEffect(()=>{
+    if(isAdmin){
+
+      setDashboardRout("manageclass")
+
+    }
+    else if(isInstructor){
+      setDashboardRout("addclass")
+    }
+  }, [user, isAdmin, isInstructor])
+
   // console.log(user?.photoURL, "nav photo")
 
   return (
@@ -53,7 +74,7 @@ const Navbar = () => {
             </li>
             <li>
               {
-                user && <Link to="/dashboard/manageclass">Dashboard</Link>
+                user && <Link to={`/dashboard/${dashboardRout}`}>Dashboard</Link>
               }
             </li>
           </ul>

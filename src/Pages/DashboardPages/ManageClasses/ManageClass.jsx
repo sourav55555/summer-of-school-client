@@ -1,13 +1,11 @@
-import useAdmin from "../../../Hooks/useAdmin";
+
 import useClasses from "../../../Hooks/useClasses";
 import Class from "./Class";
 
 const ManageClass = () => {
 
-    // const [isAdmin, isLoading] = useAdmin();
-    // console.log(isAdmin,isLoading, "form dasheasdjf");
 
-    const [classes, refetch] = useClasses();
+    const [classes] = useClasses();
 
 
     return (

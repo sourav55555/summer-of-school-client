@@ -6,13 +6,14 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../Hooks/useAdmin";
-import useInstructors from "../Hooks/useInstructors";
+import useIsInstructor from "../Hooks/useIsInstructor";
+
 import "./Dashboard.css";
 
 const Dashboard = () => {
   const [isAdmin] = useAdmin();
-  const [isInstructor] = useInstructors();
 
+  const [isInstructor] = useIsInstructor();
   console.log(isInstructor, "instructor");
 
   return (

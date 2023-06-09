@@ -22,8 +22,11 @@ import "swiper/css/pagination";
 import { Autoplay } from "swiper";
 import TopClasses from "../TopClasses/TopClasses";
 import Instructors from "../Instructors/Instructors";
+import useAdmin from "../../../Hooks/useAdmin";
+
 
 const Home = () => {
+
   return (
     <div>
       <div className="banner bg-no-repeat">

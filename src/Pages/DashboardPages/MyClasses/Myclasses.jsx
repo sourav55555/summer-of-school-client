@@ -1,9 +1,13 @@
 
 
 const Myclasses = () => {
+
+    
+    
     return (
         <div>
-            
+            <p>Your Classes</p>
+
         </div>
     );
 };
