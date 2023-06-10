@@ -13,8 +13,6 @@ const SingleClass = ({ data }) => {
 
   const [secureUrl] = useAxiosSecure();
 
-  console.log(isAdmin, isInstructor, "single cls")
-
   const {user} = useAuth();
 
     const [selectbtn, setSelectbtn] = useState(false);
@@ -35,7 +33,7 @@ const SingleClass = ({ data }) => {
         }
         const selectData ={classname: name, studentname: user.displayName, studentemail: user.email}
         secureUrl.post("/select", {selectData})
-        .then(res => console.log(res.data))
+        .then(() => {toast.success("Class Added.")})
     }
 
   return (

@@ -10,7 +10,9 @@ import ManageClass from "../Pages/DashboardPages/ManageClasses/ManageClass";
 import ManageUsers from "../Pages/DashboardPages/ManageUsers/ManageUsers";
 import Myclasses from "../Pages/DashboardPages/MyClasses/Myclasses";
 import Myenroll from "../Pages/DashboardPages/Myenroll/Myenroll";
+import Checkout from "../Pages/DashboardPages/Myselect/Checkout";
 import Myselect from "../Pages/DashboardPages/Myselect/Myselect";
+import Payment from "../Pages/DashboardPages/Myselect/Payment";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Signup/Signup";
@@ -67,6 +69,10 @@ const router = createBrowserRouter([
         {
           path: "myenroll",
           element: <Myenroll/>
+        },
+        {
+          path: "payment",
+          element: <Checkout/>
         }
         
       ]
