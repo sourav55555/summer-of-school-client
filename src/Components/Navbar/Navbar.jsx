@@ -91,7 +91,7 @@ const Navbar = () => {
               <img className="h-10 w-10 rounded-full border-2 border-[#d29e49]" src={user.photoURL} alt="" />
             </Link>
 
-              <button onClick={() => logout()} className="px-4 py-2 text-black bg-[#fb6d63] border-2 border-black ">Logout</button>
+              <button onClick={() => logout()} className="px-3 py-1 text-black bg-red-400 rounded-lg border-2 border-black ">Logout</button>
 
           </div> :
             <Link className="parent-btn" to="/login">

@@ -16,6 +16,7 @@ const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const [payment, setPayment] = useState(0);
+    const [paymentClass, setPaymentClass] = useState("");
 
     const createUser = (email, password) =>{
         setLoading(true);
@@ -70,7 +71,9 @@ const AuthProvider = ({children}) => {
         logout,
         googleLog,
         payment,
-        setPayment
+        setPayment,
+        paymentClass, 
+        setPaymentClass
     }
 
     return (

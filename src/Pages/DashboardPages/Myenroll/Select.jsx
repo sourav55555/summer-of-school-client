@@ -1,12 +1,6 @@
-import { useNavigate } from "react-router-dom";
-import useAuth from "../../../Hooks/useAuth";
 
 
-
-const Select = ({data, handleDelete}) => {
-
-    const navigate = useNavigate();
-    const {setPayment, setPaymentClass} = useAuth();
+const Select = ({data}) => {
 
     const {
         image,
@@ -17,11 +11,6 @@ const Select = ({data, handleDelete}) => {
 
       } = data;
 
-      const handlePayment = (price, name) =>{
-        setPayment(price);
-        setPaymentClass(name);
-        navigate("/dashboard/payment")
-      }
 
 
     return (
@@ -52,16 +41,7 @@ const Select = ({data, handleDelete}) => {
           </p>
 
         </div>
-        <div className="flex items-center gap-4 font-semibold">
-          <button
-            onClick={() => handlePayment(data.price, data.name)}
-            className="px-4 py-2 rounded-xl bg-green-300 disabled:opacity-40"
-          >
-            Pay
-          </button>
-          <button onClick={() => handleDelete(name)} className="px-4 py-2 rounded-xl bg-red-600 text-white disabled:opacity-40">Delete</button>
-          
-        </div>
+
       </div>
     </div>
     );

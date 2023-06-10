@@ -3,6 +3,7 @@ import { toast, Toaster } from "react-hot-toast";
 import useAuth from "../../../Hooks/useAuth";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import useClasses from "../../../Hooks/useClasses";
+import useSelectedClass from "../../../Hooks/useSelectedClass";
 import Select from "./Select";
 
 
@@ -13,17 +14,19 @@ const Myselect = () => {
     const {user} = useAuth();
     const [classes] = useClasses();
 
-    const {data: selectClass = [], refetch} = useQuery({
+    /* const {data: selectClass = [], refetch} = useQuery({
         queryKey: ["selectClass", user.email],
         queryFn: async ()=>{
             const res = await secureUrl.get(`/select/${user.email}`);
             return res.data;
         }
-    })
+    }) */
+    const [enrolled, selected, refetch] = useSelectedClass();
+    console.log( selected,"sele")
 
     const allSelect = [];
 
-    selectClass.map(select => {
+    selected.map(select => {
         allSelect.push(classes.find(data => data.name === select.classname))
     })
     console.log(allSelect, "get all select");
@@ -32,7 +35,7 @@ const Myselect = () => {
     const handleDelete = (classname) =>{
         console.log(classname);
         secureUrl.delete(`/select?email=${user.email}&&classname=${classname}`)
-        .then(() => toast("Class Deleted"))
+        .then(() => {toast("Class Deleted"); refetch()})
 
     }
 

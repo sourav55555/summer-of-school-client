@@ -4,6 +4,7 @@ import {
   faCirclePlus,
   faHandPointer,
   faHouse,
+  faMoneyBill1Wave,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -128,6 +129,19 @@ const Dashboard = () => {
                 >
                   <FontAwesomeIcon className="me-2" icon={faCheckToSlot} />
                   My Enrolled Classes
+                </NavLink>
+               </li> 
+              <li className="">
+                <NavLink
+                  to="/dashboard/payments"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "actived"
+                      : "bg-gradient-to-r border-l-4 border-[#423319] from-[#604a24] to-[rgba(142,110,53,.0)] ps-3 py-3"
+                  }
+                >
+                  <FontAwesomeIcon className="me-2" icon={faMoneyBill1Wave} />
+                  My Payments
                 </NavLink>
               </li>
             </>

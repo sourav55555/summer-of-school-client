@@ -56,7 +56,7 @@ const SingleClass = ({ data }) => {
             <span className="font-semibold">Available Sets:</span> {availableSets}
           </p>
           <p>
-            <span className="font-semibold">Price:</span> {price}
+            <span className="font-semibold">Price:</span> {price}$
           </p>
         </div>
         <div className="parent-btn pt-3">

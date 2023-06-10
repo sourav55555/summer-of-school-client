@@ -13,7 +13,9 @@ import Myenroll from "../Pages/DashboardPages/Myenroll/Myenroll";
 import Checkout from "../Pages/DashboardPages/Myselect/Checkout";
 import Myselect from "../Pages/DashboardPages/Myselect/Myselect";
 import Payment from "../Pages/DashboardPages/Myselect/Payment";
+import Payments from "../Pages/DashboardPages/Payments/Payments";
 import Home from "../Pages/Home/Home/Home";
+import InstructorsPage from "../Pages/Instructors/InstructorsPage";
 import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Signup/Signup";
 import AdminRout from './AdminRout';
@@ -39,6 +41,10 @@ const router = createBrowserRouter([
         {
           path: "/classes",
           element: <Classes/>
+        },
+        {
+          path: "/instructors",
+          element: <InstructorsPage/>
         }
       ]
     },
@@ -73,6 +79,10 @@ const router = createBrowserRouter([
         {
           path: "payment",
           element: <Checkout/>
+        },
+        {
+          path: "payments",
+          element: <Payments/>
         }
         
       ]

@@ -1,0 +1,24 @@
+.cardIns{
+    transition: all linear .27s;
+}
+
+
+.insImage{
+    transition: all linear .27s;
+}
+.imgbg{
+    transition: all linear .27s;
+}
+
+.cardIns:hover{
+    transform: translateY(-15px);
+}
+
+.cardIns:hover .insImage{
+    transform: scale(1.08) translateY(-11px);
+}
+
+.cardIns:hover .imgbg{
+    transform: scale(1.08);
+    width: 65%;
+}
