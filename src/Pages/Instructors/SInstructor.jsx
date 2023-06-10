@@ -4,7 +4,7 @@ import "./instructor.css";
 const SInstructor = ({data}) => {
     const {name, photo, email } = data;
     return (
-        <div className="w-[21rem] cardIns">
+        <div className="md:w-[21rem] w-full cardIns">
             <div className="w-full">
                 <div className="h-fit p-4 mx-auto relative imgbg rounded-full z-10 dark:bg-[#061551] bg-base-100 -mb-[3.4rem] w-3/5 ">
                 <img className="max-h-[9rem] rounded-full  insImage" src={photo} alt="" />

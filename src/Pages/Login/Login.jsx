@@ -33,20 +33,20 @@ const Login = () => {
   }
 
   return (
-    <div className='dark:bg-[#061551] dark:text-white'>
-      <div className={` ${authdark ? "dark-page-header" : "page-header"} h-[20rem]`}>
-        <div className="pt-32 px-20 flex items-center justify-between">
+    <div className='dark:bg-[#061551] dark:text-white pb-28'>
+      <div className={` ${authdark ? "dark-page-header" : "page-header"} h-[17rem] md:h-[20rem]`}>
+        <div className="md:pt-32 pt-36 px-6 md:px-20 flex items-center justify-between">
           <p className="font2 text-xl font-semibold">Home / <span className="text-5xl font-semibold text-white">Login</span></p>
-          <img className="w-[14em]" src={bannerimg} alt="" />
+          <img className="w-[14em] md:block hidden" src={bannerimg} alt="" />
         </div>
       </div>
-      <div className="min-h-screen flex justify-center items-center">
-        <div className="w-1/2">
+      <div className="flex pt-32 md:flex-row flex-col justify-center items-center md:mt-0 px-6 mt-20">
+        <div className="md:w-1/2">
           <img className="w-[35rem] mx-auto rounded-3xl" src={image} alt="" />
         </div>
-        <div className="w-1/2">
+        <div className="md:w-1/2 w-full md:mt-0 mt-10">
           <div className="logbg bg-[url('https://i.ibb.co/T8bFR7V/blob-haikei-7.png')] 
-          dark:bg-[url('https://i.ibb.co/2KVBr9X/blob-haikei-8.png')] h-[32rem] w-3/5 mx-auto flex items-center flex-col gap-5 justify-center ">
+          dark:bg-[url('https://i.ibb.co/2KVBr9X/blob-haikei-8.png')] h-[32rem] md:w-3/5 mx-auto flex items-center flex-col gap-5 justify-center ">
             <form
               className="flex flex-col w-3/4 mt-8 mx-auto items-center justify-center dark:text-black"
               onSubmit={handleSubmit(onSubmit)}

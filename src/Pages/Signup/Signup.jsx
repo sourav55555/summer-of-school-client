@@ -12,7 +12,7 @@ import { useContext } from "react";
 
 const Signup = () => {
 
-    const {user, createUser, googleLog, loading} = useContext(AuthContext);
+    const {user, createUser, googleLog, loading, authdark} = useContext(AuthContext);
 
     const [secureUrl] = useAxiosSecure();
 
@@ -81,24 +81,24 @@ const Signup = () => {
 
   return (
     <div>
-      <div className="page-header h-[20rem]">
-        <div className="pt-32 px-20 flex items-center justify-between">
+      <div className={` ${authdark ? "dark-page-header" : "page-header"} h-[17rem] md:h-[20rem]`}>
+        <div className="md:pt-32 pt-36 px-6 md:px-20 flex items-center justify-between">
           <p className="font2 text-xl font-semibold">
             Home /{" "}
             <span className="text-5xl font-semibold text-white">Register</span>
           </p>
-          <img className="w-[14em]" src={bannerimg} alt="" />
+          <img className="w-[14em] md:block hidden" src={bannerimg} alt="" />
         </div>
       </div>
 
-      <div className="min-h-screen flex justify-center items-center">
-        <div className="w-1/2">
+      <div className="min-h-screen flex md:flex-row flex-col justify-center items-center pb-32">
+        <div className="md:w-1/2 mt-16">
           <img className="w-[35rem] mx-auto" src={image} alt="" />
         </div>
-        <div className="w-1/2">
-          <div className=" h-full w-full border-l-4 p-12 mx-auto flex items-center flex-col gap-5 justify-center ">
+        <div className="md:w-1/2 mt-8">
+          <div className=" h-full w-full border-l-4 px-6 md:p-12 mx-auto flex items-center flex-col gap-5 justify-center ">
             <form
-              className="flex flex-col w-3/5 mt-8 mx-auto items-center justify-center"
+              className="flex flex-col md:w-3/5 mt-8 mx-auto items-center justify-center"
               onSubmit={handleSubmit(onSubmit)}
             >
               {/* register your input into the hook by invoking the "register" function */}
@@ -114,7 +114,7 @@ const Signup = () => {
               />
 
               {/* include validation with required or other standard HTML validation rules */}
-              <div className="flex gap-3 justify-center items-center">
+              <div className="flex gap-3 justify-center items-center md:flex-row flex-col">
                 <input
                   className="w-full px-6 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]"
                   {...register("password", { required: true, minLength:6, pattern: /(?=.*[A-Z])(?=.*[!@#$&*])/ })}
@@ -131,13 +131,13 @@ const Signup = () => {
               </div>
               {/* errors will return when field validation fails  */}
               {errors.exampleRequired && <span>This field is required</span>}
-              <div className="flex gap-3 w-full items-center justify-center">
+              <div className="flex gap-3 w-full items-center justify-center md:flex-row flex-col">
               <input
-                className="w-1/2 px-6 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]"
+                className="md:w-1/2 px-6 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]"
                 {...register("phone", { required: true })}
                 placeholder="Enter Phone Number"
               />
-              <select className="w-1/2 px-6 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]" {...register("gender")}>
+              <select className="md:w-1/2 w-full px-6 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]" {...register("gender")}>
               <option value="">Select Gender</option>
                 <option value="female">female</option>
                 <option value="male">male</option>

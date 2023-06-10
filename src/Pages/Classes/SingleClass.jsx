@@ -37,7 +37,7 @@ const SingleClass = ({ data }) => {
     }
 
   return (
-    <div className={`border-2 w-fit font2 rounded-2xl border-[#8e6e35] p-4 ${availableSets === 0 ? "bg-red-300" : "" }`}>
+    <div className={`border-2 w-fit font2 rounded-2xl border-[#8e6e35] p-4 shadow-lg shadow-slate-500 ${availableSets === 0 ? "bg-red-300" : "" }`}>
       <div className=" mx-auto h-[10rem] dark:bg-[rgb(133,77,255)] bg-amber-100 w-full rounded-2xl p-3">
         <img className="w-[11rem] mx-auto" src={image} alt="" />
       </div>
