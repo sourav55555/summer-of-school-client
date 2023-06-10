@@ -31,12 +31,12 @@ const WhyRegister = () => {
       }, [controls]);
 
   return (
-    <div className=" text-center pt-36 pb-32">
+    <div className=" text-center pt-36 pb-32 px-6">
       <h3 className="font1 text-4xl font-bold mb-20">
         This is why you should register.
       </h3>
-      <div className="flex justify-center gap-8 items-center w-4/5 mx-auto text-start">
-        <div className="w-[34%] font2 space-y-12">
+      <div className="flex justify-center gap-8 items-center md:w-4/5 mx-auto text-start md:flex-row flex-col">
+        <div className="md:w-[34%] font2 space-y-12">
           <div className="flex gap-3 items-center ">
             <div className=" w-[20%] flex items-center justify-center ">
               <div className="w-16 h-16 bg-[#f3d5a1] rounded-full flex items-center justify-center">
@@ -84,7 +84,7 @@ const WhyRegister = () => {
             </div>
           </div>
         </div>
-        <div className="w-[32%]">
+        <div className="md:w-[32%]">
           <motion.div
             animate={controls}
             style={{ rotate }}
@@ -93,7 +93,7 @@ const WhyRegister = () => {
             <img className="w-full" src={middleimg} alt="" />
           </motion.div>
         </div>
-        <div className="w-[34%] font2 space-y-12">
+        <div className="md:w-[34%] font2 space-y-12">
           <div className="flex gap-3 items-center ">
             <div className=" w-[20%] flex items-center justify-center ">
               <div className="w-16 h-16 bg-[#f3d5a1] rounded-full flex items-center justify-center">

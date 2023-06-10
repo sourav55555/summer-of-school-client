@@ -3,22 +3,25 @@ import icon from "../../assets/icons/football.png";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 justify-around bg-[#d2c2a6] dark:bg-[#040712] dark:text-white text-base-content">
-        <div>
+      <footer className="p-6 md:p-10 flex md:flex-row flex-col justify-around bg-[#d2c2a6] dark:bg-[#040712] dark:text-white text-base-content">
+        <div className="flex justify-around md:w-1/2 gap-12 items-center">
+        <div className="flex flex-col">
           <span className="footer-title">Services</span>
           <a className="link link-hover">Branding</a>
           <a className="link link-hover">Design</a>
           <a className="link link-hover">Marketing</a>
           <a className="link link-hover">Advertisement</a>
         </div>
-        <div>
+        <div className="flex flex-col">
           <span className="footer-title">Company</span>
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
           <a className="link link-hover">Jobs</a>
           <a className="link link-hover">Press kit</a>
         </div>
-        <div>
+        </div>
+        <div className="flex justify-around md:w-1/2 md:mt-0 mt-10 gap-12 items-center">
+        <div className="flex flex-col">
           <span className="footer-title">Legal</span>
           <a className="link link-hover">Terms of use</a>
           <a className="link link-hover">Privacy policy</a>
@@ -30,6 +33,7 @@ const Footer = () => {
         <p>Mail: sport@mail.com</p>
         <p>122, Street Road</p>
         <p>Dhaka, Bangladesh</p>
+        </div>
         </div>
       </footer>
       <footer className="footer px-10 py-4 border-t bg-[#d2c2a6] dark:bg-[#040712] dark:text-white text-base-content items-center border-base-300">

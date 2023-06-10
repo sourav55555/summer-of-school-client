@@ -35,10 +35,10 @@ const Home = () => {
     <div className="dark:bg-[#061551] dark:text-white">
       <div className="banner bg-[url('https://i.ibb.co/t4Xt9Pv/liquid-cheese-svg.jpg')] 
       dark:bg-[url('https://i.ibb.co/mFCN8qT/liquid-cheese-new-1.png')] bg-no-repeat">
-        <div className="min-h-screen maxWidth mx-auto relative pt-44 pb-32  flex items-center justify-between gap-8 ">
-          <div className="w-7/12 relative z-20">
-            <div className="w-3/4 ms-auto space-y-10">
-              <h3 className="font1 text-8xl dark:text-[#e5fcff] text-[#213555] font-bold">
+        <div className="min-h-screen maxWidth mx-auto relative pt-44 pb-32  flex items-center justify-between gap-8 md:flex-row flex-col-reverse">
+          <div className="md:w-7/12 w-full md:px-0 px-6 relative z-20">
+            <div className="md:w-3/4 ms-auto space-y-10">
+              <h3 className="font1 text-7xl md:text-8xl dark:text-[#e5fcff] text-[#213555] font-bold">
                 Best Summer <br />
                 Camp
               </h3>
@@ -53,8 +53,8 @@ const Home = () => {
           </div>
 
           {/* slider right section  */}
-          <div className="w-5/12">
-            <div className=" p-3 me-auto w-3/4 text-center">
+          <div className="md:w-5/12 w-full">
+            <div className=" p-3 mx-auto md:me-auto w-5/6 md:w-3/4 text-center">
               <Swiper
                 spaceBetween={30}
                 slidesPerView={1}
@@ -84,16 +84,16 @@ const Home = () => {
           </div>
 
           {/* background images */}
-          <div className="absolute w-fit bottom-[5%] right-[3%]">
+          <div className="absolute md:block hidden w-fit bottom-[5%] right-[3%]">
             <img className="w-36" src={bgimg1} alt="" />
           </div>
-          <div className="absolute w-fit top-[22%] left-[6%] z-0">
+          <div className="absolute md:block hidden w-fit top-[22%] left-[6%] z-0">
             <img className="w-40" src={bgimg2} alt="{bgimg1}" />
           </div>
          {/*  <div className="absolute w-fit bottom-[5%] left-[5%]">
             <img className="w-60" src={bgimg3} alt="{bgimg1}" />
           </div> */}
-          <div className="absolute w-fit bottom-[15%] right-[44%]">
+          <div className="absolute md:block hidden w-fit bottom-[15%] right-[44%]">
             <img className="w-60" src={bgimg4} alt="{bgimg1}" />
           </div>
         </div>

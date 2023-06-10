@@ -21,7 +21,7 @@ const InstructorsPage = () => {
           <img className="w-[10.6rem]" src={bannerimg} alt="" />
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-12 w-3/4 mx-auto py-32">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:w-3/4 mx-auto py-32">
         {
             instructors.map(data => <SInstructor key={data._id} data={data} />)
         }
