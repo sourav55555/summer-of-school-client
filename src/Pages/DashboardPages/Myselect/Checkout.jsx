@@ -15,8 +15,8 @@ const Checkout = () => {
     const price = parseFloat(paymentAmount.toFixed(2))
 
     return (
-        <div className="w-2/4 mx-auto">
-            <p className="mb-6">This is payment method.</p>
+        <div className="pt-16">
+            <p className="text-4xl font-semibold font1">Complete Your Payment.</p>
 
             <Elements stripe={stripePromise}>
                 <Payment price= {price}/>

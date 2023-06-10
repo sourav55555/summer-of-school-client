@@ -97,7 +97,7 @@ const Payment = () => {
                   .then(res => {
                     console.log(res.data, "cleat all");
                     setPayment(0);
-                    toast.success("Payment Method Complete")
+                    toast.success("Payment Successful")
                   })
 
                 })
@@ -108,10 +108,10 @@ const Payment = () => {
 
   return (
     <div>
-      <p>Payment Amount: {payment}$</p>
+      <p className="my-6 text-xl ">Payment Amount: {payment}$</p>
 
       <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="w-1/2 my-3">
           <CardElement
             options={{
               style: {

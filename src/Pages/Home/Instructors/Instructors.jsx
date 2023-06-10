@@ -14,7 +14,7 @@ const Instructors = () => {
     console.log(instructors)
 
     return (
-        <div className="min-h-screen text-center mt-36 ">
+        <div className=" text-center mt-36 ">
           <h2 className="font1 font-semibold mx-auto text-4xl mb-12">Our Top Instructors</h2>
           <div className="grid grid-cols-3 gap-12 w-4/5 mx-auto ">
           {

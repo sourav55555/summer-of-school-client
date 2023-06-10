@@ -36,7 +36,7 @@ const Home = () => {
       <div className="banner bg-[url('https://i.ibb.co/t4Xt9Pv/liquid-cheese-svg.jpg')] 
       dark:bg-[url('https://i.ibb.co/mFCN8qT/liquid-cheese-new-1.png')] bg-no-repeat">
         <div className="min-h-screen maxWidth mx-auto relative pt-44 pb-32  flex items-center justify-between gap-8 ">
-          <div className="w-7/12 relative z-30">
+          <div className="w-7/12 relative z-20">
             <div className="w-3/4 ms-auto space-y-10">
               <h3 className="font1 text-8xl dark:text-[#e5fcff] text-[#213555] font-bold">
                 Best Summer <br />

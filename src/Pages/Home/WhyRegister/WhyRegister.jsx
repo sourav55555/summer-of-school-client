@@ -31,7 +31,7 @@ const WhyRegister = () => {
       }, [controls]);
 
   return (
-    <div className="min-h-screen text-center pt-36 pb-32">
+    <div className=" text-center pt-36 pb-32">
       <h3 className="font1 text-4xl font-bold mb-20">
         This is why you should register.
       </h3>
