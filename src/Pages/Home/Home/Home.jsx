@@ -23,6 +23,7 @@ import { Autoplay } from "swiper";
 import TopClasses from "../TopClasses/TopClasses";
 import Instructors from "../Instructors/Instructors";
 import useAdmin from "../../../Hooks/useAdmin";
+import WhyRegister from "../WhyRegister/WhyRegister";
 
 
 const Home = () => {
@@ -82,7 +83,7 @@ const Home = () => {
           <div className="absolute w-fit bottom-[5%] right-[3%]">
             <img className="w-36" src={bgimg1} alt="" />
           </div>
-          <div className="absolute w-fit top-[15%] left-[9%] z-0">
+          <div className="absolute w-fit top-[22%] left-[6%] z-0">
             <img className="w-40" src={bgimg2} alt="{bgimg1}" />
           </div>
          {/*  <div className="absolute w-fit bottom-[5%] left-[5%]">
@@ -99,6 +100,9 @@ const Home = () => {
 
       {/* instructors  */}
       <Instructors/>
+
+      {/* why resgister  */}
+      <WhyRegister/>
     </div>
   );
 };
