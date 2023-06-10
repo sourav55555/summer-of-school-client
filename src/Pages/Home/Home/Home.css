@@ -1,6 +1,11 @@
 .banner{
     background-size: 100% 100%;
-    background-image: url('../../../assets/liquid-cheese-svg.jpg');
+    /* background-image: url('../../../assets/liquid-cheese-svg.jpg'); */
     background-position: center;
 
+}
+
+.banner1{
+    color: blue;
+    
 }

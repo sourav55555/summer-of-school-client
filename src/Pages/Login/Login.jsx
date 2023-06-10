@@ -10,7 +10,7 @@ import { toast, Toaster } from "react-hot-toast";
 
 const Login = () => {
 
-  const {login, googleLog} = useContext(AuthContext);
+  const {login, googleLog, authdark} = useContext(AuthContext);
 
   const {
     register,
@@ -33,8 +33,8 @@ const Login = () => {
   }
 
   return (
-    <div>
-      <div className="page-header h-[20rem]">
+    <div className='dark:bg-[#061551] dark:text-white'>
+      <div className={` ${authdark ? "dark-page-header" : "page-header"} h-[20rem]`}>
         <div className="pt-32 px-20 flex items-center justify-between">
           <p className="font2 text-xl font-semibold">Home / <span className="text-5xl font-semibold text-white">Login</span></p>
           <img className="w-[14em]" src={bannerimg} alt="" />
@@ -42,12 +42,13 @@ const Login = () => {
       </div>
       <div className="min-h-screen flex justify-center items-center">
         <div className="w-1/2">
-          <img className="w-[35rem] mx-auto" src={image} alt="" />
+          <img className="w-[35rem] mx-auto rounded-3xl" src={image} alt="" />
         </div>
         <div className="w-1/2">
-          <div className="logbg h-[32rem] w-3/5 mx-auto flex items-center flex-col gap-5 justify-center ">
+          <div className="logbg bg-[url('https://i.ibb.co/T8bFR7V/blob-haikei-7.png')] 
+          dark:bg-[url('https://i.ibb.co/2KVBr9X/blob-haikei-8.png')] h-[32rem] w-3/5 mx-auto flex items-center flex-col gap-5 justify-center ">
             <form
-              className="flex flex-col w-3/4 mt-8 mx-auto items-center justify-center"
+              className="flex flex-col w-3/4 mt-8 mx-auto items-center justify-center dark:text-black"
               onSubmit={handleSubmit(onSubmit)}
             >
               {/* register your input into the hook by invoking the "register" function */}

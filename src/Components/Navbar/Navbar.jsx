@@ -7,8 +7,10 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import useAdmin from "../../Hooks/useAdmin";
 import useIsInstructor from "../../Hooks/useIsInstructor";
 import "./Navbar.css";
+import darkimg from '../../assets/sky.png';
+import light from '../../assets/brightness.png';
 
-const Navbar = () => {
+const Navbar = ({handleDark , dark}) => {
 
   const [isAdmin] = useAdmin();
   const [isInstructor] = useIsInstructor();
@@ -18,6 +20,7 @@ const Navbar = () => {
   const {user, logout} = useContext(AuthContext);
 
   const [toggle, setToggle] = useState(false);
+
 
   useEffect(()=>{
     if(isAdmin){
@@ -81,6 +84,10 @@ const Navbar = () => {
               {
                 user && <Link to={`/dashboard/${dashboardRout}`}>Dashboard</Link>
               }
+            </li>
+            <li className="items-center flex">
+            <button onClick={()=> handleDark(!dark)}>{dark ? <img src={light} className='h-6 w-6'/> :  <img src={darkimg} className='w-6 h-6' /> }
+            </button>
             </li>
           </ul>
         </div>

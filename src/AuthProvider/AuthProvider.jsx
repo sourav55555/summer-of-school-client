@@ -17,6 +17,8 @@ const AuthProvider = ({children}) => {
     const [loading, setLoading] = useState(true);
     const [payment, setPayment] = useState(0);
     const [paymentClass, setPaymentClass] = useState("");
+    const [authdark, setAuthDark] = useState(false);
+
 
     const createUser = (email, password) =>{
         setLoading(true);
@@ -73,7 +75,9 @@ const AuthProvider = ({children}) => {
         payment,
         setPayment,
         paymentClass, 
-        setPaymentClass
+        setPaymentClass,
+        authdark,
+        setAuthDark
     }
 
     return (

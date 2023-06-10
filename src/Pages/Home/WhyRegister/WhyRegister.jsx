@@ -31,7 +31,7 @@ const WhyRegister = () => {
       }, [controls]);
 
   return (
-    <div className="min-h-screen text-center pt-36 mb-32">
+    <div className="min-h-screen text-center pt-36 pb-32">
       <h3 className="font1 text-4xl font-bold mb-20">
         This is why you should register.
       </h3>
@@ -45,7 +45,7 @@ const WhyRegister = () => {
             </div>
             <div className="w-3/4">
               <p className="text-xl mb-1 font-bold">Diverse Sports Programs</p>
-              <p className="text-slate-700">
+              <p className="dark:text-slate-300 text-slate-700">
                 Wide range of sports activities and programs{" "}
               </p>
             </div>
@@ -61,7 +61,7 @@ const WhyRegister = () => {
               <p className="text-xl mb-1 font-bold">
                 Professional Coaching Staff
               </p>
-              <p className="text-slate-700">
+              <p className="dark:text-slate-300 text-slate-700">
                 {" "}
                 We employ experienced and qualified coaches who specialize in
                 specific sports
@@ -77,7 +77,7 @@ const WhyRegister = () => {
             </div>
             <div className="w-3/4">
               <p className="text-xl mb-1 font-bold">Skill Development</p>
-              <p className="text-slate-700">
+              <p className="dark:text-slate-300 text-slate-700">
                 Focus on skill development and provide structured training
                 sessions
               </p>
@@ -104,7 +104,7 @@ const WhyRegister = () => {
               <p className="text-xl mb-1 font-bold">
                 Team Building and Competition
               </p>
-              <p className="text-slate-700">
+              <p className="dark:text-slate-300 text-slate-700">
                 We organize friendly competitions and scrimmages
               </p>
             </div>
@@ -118,7 +118,7 @@ const WhyRegister = () => {
             </div>
             <div className="w-3/4">
               <p className="text-xl mb-1 font-bold">Facilities and Equipment</p>
-              <p className="text-slate-700">
+              <p className="dark:text-slate-300 text-slate-700">
                 We have well-maintained sports facilities and equipment
               </p>
             </div>
@@ -132,7 +132,7 @@ const WhyRegister = () => {
             </div>
             <div className="w-3/4">
               <p className="text-xl mb-1 font-bold">Recreational Activities</p>
-              <p className="text-slate-700">
+              <p className="dark:text-slate-300 text-slate-700">
                 Various recreational activities to provide a well-rounded
                 experience
               </p>

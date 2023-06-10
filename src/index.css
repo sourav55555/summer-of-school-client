@@ -80,6 +80,34 @@
   right: -9px;
 }
 
+.darkbutton2{
+  padding: 1rem 4rem;
+  background:  rgb(133, 77, 255);
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  transition: all .2s linear;
+}
+
+.darkbutton2::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #628dc4;
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  z-index: -1;
+  transition: all .2s linear;
+}
+
+.darkbutton2:hover:after{
+  top: -9px;
+  right: -9px;
+}
+
 .button3{
   padding: .8rem 4rem;
   background:  #526D82;
@@ -126,15 +154,15 @@
   height: 100%;
   background: #9DB2BF;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 6px;
+  right: 6px;
   z-index: -1;
   transition: all .2s linear;
 }
 
 .button4:hover:after{
-  top: -9px;
-  right: -9px;
+  top: -6px;
+  right: -6px;
 }
 
 .maxWidth{
@@ -144,6 +172,11 @@
 
 .page-header{
   background-image: url(/src/assets/liquid-cheese1-svg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.dark-page-header{
+  background-image: url('/src/assets/liquid-cheese\(1\)-sortsvg.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }

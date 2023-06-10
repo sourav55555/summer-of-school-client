@@ -22,28 +22,32 @@ import "swiper/css/pagination";
 import { Autoplay } from "swiper";
 import TopClasses from "../TopClasses/TopClasses";
 import Instructors from "../Instructors/Instructors";
-import useAdmin from "../../../Hooks/useAdmin";
 import WhyRegister from "../WhyRegister/WhyRegister";
+import useAuth from "../../../Hooks/useAuth";
 
 
 const Home = () => {
 
+  const {authdark} = useAuth();
+  console.log(authdark,"darks");
+
   return (
-    <div>
-      <div className="banner bg-no-repeat">
+    <div className="dark:bg-[#061551] dark:text-white">
+      <div className="banner bg-[url('https://i.ibb.co/t4Xt9Pv/liquid-cheese-svg.jpg')] 
+      dark:bg-[url('https://i.ibb.co/mFCN8qT/liquid-cheese-new-1.png')] bg-no-repeat">
         <div className="min-h-screen maxWidth mx-auto relative pt-44 pb-32  flex items-center justify-between gap-8 ">
           <div className="w-7/12 relative z-30">
             <div className="w-3/4 ms-auto space-y-10">
-              <h3 className="font1 text-8xl text-[#213555] font-bold">
+              <h3 className="font1 text-8xl dark:text-[#e5fcff] text-[#213555] font-bold">
                 Best Summer <br />
                 Camp
               </h3>
-              <p className="font-semibold font2 text-3xl text-[rgb(64,64,64)]">
+              <p className="font-semibold font2 text-3xl text-[rgb(255,255,255)]">
                 Get Ready For Summer <br />
-                With <span className="font-bold text-[#38567c]">Sports.</span>
+                With <span className="font-bold dark:text-[rgb(173,135,255)] text-[#38567c]">Sports.</span>
               </p>
               <div className="parent-btn">
-                <button className="button2"> Register Now</button>
+                <button className={`${authdark ? "darkbutton2" : "button2" } `}> Register Now</button>
               </div>
             </div>
           </div>
