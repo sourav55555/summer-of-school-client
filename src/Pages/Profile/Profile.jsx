@@ -6,7 +6,7 @@ import { faCircleInfo, faEnvelope, faPhone, faUser, faVenusMars } from "@fortawe
 
 const Profile = () => {
   const { user, authdark } = useAuth();
-  const [users] = useUser();
+  const [users, refetch, isLoading] = useUser();
 
   const profile = users.find((data) => data.email === user.email);
   console.log(profile);

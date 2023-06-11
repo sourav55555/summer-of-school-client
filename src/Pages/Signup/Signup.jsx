@@ -159,7 +159,6 @@ const Signup = () => {
 
 
               <div className="parent-btn mt-6">
-                {/* <input className="button2" type="submit" value="Login" /> */}
                 <button
                   type="submit"
                   className={` ${authdark ? "darkbutton3" : "button3"}  text-black bg-[#ECF8F9]`}

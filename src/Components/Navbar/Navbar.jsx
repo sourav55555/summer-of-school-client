@@ -110,7 +110,7 @@ const Navbar = ({handleDark , dark}) => {
           <li>
           { user ? <div className="flex gap-6 items-center md:hidden">
             
-            <Link to="/profile">
+            <Link to="/profiles">
               <img className="h-10 w-10 rounded-full border-2 border-[#d29e49]" src={user.photoURL} alt="" />
             </Link>
 
@@ -132,7 +132,7 @@ const Navbar = ({handleDark , dark}) => {
            
           { user ? <div className="flex gap-6 items-center ">
             
-            <Link to="/profile">
+            <Link to="/profiles">
               <img className="h-10 w-10 rounded-full border-2 border-[#d29e49]" src={user.photoURL} alt="" />
             </Link>
 

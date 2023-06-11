@@ -6,7 +6,7 @@ const useUser = () => {
 
     const [secureUrl] = useAxiosSecure();
 
-    const {refetch, data : users = []} = useQuery({
+    const {refetch, data : users = [], isLoading} = useQuery({
         queryKey: ["users"],
         queryFn: async()=>{
             const res = await secureUrl("user");
@@ -16,7 +16,7 @@ const useUser = () => {
         }
     })
 
-    return [users, refetch];
+    return [users, refetch, isLoading];
 };
 
 export default useUser;
