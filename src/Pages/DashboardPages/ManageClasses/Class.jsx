@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import useClasses from "../../../Hooks/useClasses";
 
 const Class = ({ data }) => {
   const {
@@ -13,6 +14,8 @@ const Class = ({ data }) => {
     price,
     status,
   } = data;
+
+  const [classes, refetch] = useClasses();
 
   const [secureUrl] = useAxiosSecure();
 
@@ -27,6 +30,7 @@ const Class = ({ data }) => {
     secureUrl.patch(`/class/${data._id}`, { string }).then(() => {
       setClassStatus(string);
       toast("Class Updated.");
+      refetch();
     });
   };
 

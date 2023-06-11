@@ -4,9 +4,11 @@ import image from "../../assets/10.jpg";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import bannerimg from '../../assets/bg-images/pngegg (3).png';
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast, Toaster } from "react-hot-toast";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 
 const Login = () => {
 
@@ -26,6 +28,16 @@ const Login = () => {
     })
     .catch(error => toast.error(`${error.message}`))
   };
+
+  const [show, setShow] = useState("password");
+
+  const handlePass = () => {
+    if(show == "password"){
+      setShow("text");
+    }else{
+      setShow("password")
+    }
+  }
 
   const handleGoogle = ()=>{
     googleLog()
@@ -59,11 +71,17 @@ const Login = () => {
               />
 
               {/* include validation with required or other standard HTML validation rules */}
+              <div className="w-full relative">
               <input
                 className="w-full px-6 mt-5 py-3 placeholder:text-black"
-                {...register("password", { required: true })}
+                {...register( "password" , { required: true })}
+                type={show}
                 placeholder="Enter Password"
               />
+              <label onClick={handlePass} className="ms-auto absolute cursor-pointer right-4 top-8 ">
+                <FontAwesomeIcon className="w-5 h-5" icon={faEye}/>
+              </label>
+              </div>
               {/* errors will return when field validation fails  */}
               {errors.exampleRequired && <span>This field is required</span>}
               <p className="text-red-300 w-full text-start mt-2 mb-6">

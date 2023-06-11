@@ -25,6 +25,7 @@ import Instructors from "../Instructors/Instructors";
 import WhyRegister from "../WhyRegister/WhyRegister";
 import useAuth from "../../../Hooks/useAuth";
 import { Link } from "react-router-dom";
+import Loader from "../../../Components/Loader/Loader";
 
 
 const Home = () => {
@@ -108,6 +109,7 @@ const Home = () => {
 
       {/* why resgister  */}
       <WhyRegister/>
+
     </div>
   );
 };

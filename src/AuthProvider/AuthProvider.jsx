@@ -49,7 +49,7 @@ const AuthProvider = ({children}) => {
             
             // set token 
             if(currentUser){
-                axios.post('http://localhost:5000/jwt', {email: currentUser.email})
+                axios.post('https://summer-camp-client.onrender.com/jwt', {email: currentUser.email})
                 .then(data =>{
                     localStorage.setItem('token', data.data.token)
                     setLoading(false);

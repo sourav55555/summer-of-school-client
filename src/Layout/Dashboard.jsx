@@ -32,8 +32,8 @@ const Dashboard = () => {
   }, [isAdmin, isInstructor])
 
   return (
-    <div className="flex min-h-screen justify-between">
-      <nav className="dashboard h-screen w-[15rem] pt-40 ps-8">
+    <div className="min-h-screen relative">
+      <nav className="dashboard h-screen w-[15rem] pt-40 ps-8 fixed left-0 top-0">
         <ul className="text-base font2 space-y-8 text-white">
 
           {/* admin dashboard  */}
@@ -156,7 +156,7 @@ const Dashboard = () => {
           </li>
         </ul>
       </nav>
-      <div className="w-3/4 p-8">
+      <div className="w-3/4 ms-auto p-8">
         <Outlet />
       </div>
     </div>

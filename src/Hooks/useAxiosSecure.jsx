@@ -4,7 +4,7 @@ import { useEffect } from "react";
 // import useAuth from "./useAuth";
 
 const secureUrl = axios.create({
-  baseURL : "http://localhost:5000/"
+  baseURL : "https://summer-camp-client.onrender.com/"
 })
 
 const useAxiosSecure = () => {
