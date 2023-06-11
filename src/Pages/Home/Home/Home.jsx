@@ -24,6 +24,7 @@ import TopClasses from "../TopClasses/TopClasses";
 import Instructors from "../Instructors/Instructors";
 import WhyRegister from "../WhyRegister/WhyRegister";
 import useAuth from "../../../Hooks/useAuth";
+import { Link } from "react-router-dom";
 
 
 const Home = () => {
@@ -47,7 +48,7 @@ const Home = () => {
                 With <span className="font-bold dark:text-[rgb(173,135,255)] text-[#38567c]">Sports.</span>
               </p>
               <div className="parent-btn">
-                <button className={`${authdark ? "darkbutton2" : "button2" } `}> Register Now</button>
+                <Link to="/register" className={`${authdark ? "darkbutton2" : "button2" } `}> Register Now</Link>
               </div>
             </div>
           </div>

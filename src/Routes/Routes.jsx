@@ -17,6 +17,7 @@ import Payments from "../Pages/DashboardPages/Payments/Payments";
 import Home from "../Pages/Home/Home/Home";
 import InstructorsPage from "../Pages/Instructors/InstructorsPage";
 import Login from "../Pages/Login/Login";
+import Profile from "../Pages/Profile/Profile";
 import Signup from "../Pages/Signup/Signup";
 import AdminRout from './AdminRout';
 import PrivateRout from './PrivateRout';
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
         {
           path: "/instructors",
           element: <InstructorsPage/>
+        },
+        {
+          path: "/profile",
+          element: <Profile/>
         }
       ]
     },

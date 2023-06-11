@@ -12,7 +12,7 @@ import { useContext } from "react";
 
 const Signup = () => {
 
-    const {user, createUser, googleLog, loading, authdark} = useContext(AuthContext);
+    const {user, createUser, googleLog, authdark} = useContext(AuthContext);
 
     const [secureUrl] = useAxiosSecure();
 
@@ -21,7 +21,6 @@ const Signup = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
@@ -80,7 +79,7 @@ const Signup = () => {
   }
 
   return (
-    <div>
+    <div  className='dark:bg-[#061551] dark:text-white pb-28'>
       <div className={` ${authdark ? "dark-page-header" : "page-header"} h-[17rem] md:h-[20rem]`}>
         <div className="md:pt-32 pt-36 px-6 md:px-20 flex items-center justify-between">
           <p className="font2 text-xl font-semibold">
@@ -93,22 +92,22 @@ const Signup = () => {
 
       <div className="min-h-screen flex md:flex-row flex-col justify-center items-center pb-32">
         <div className="md:w-1/2 mt-16">
-          <img className="w-[35rem] mx-auto" src={image} alt="" />
+          <img className="w-[35rem] mx-auto rounded-3xl" src={image} alt="" />
         </div>
         <div className="md:w-1/2 mt-8">
           <div className=" h-full w-full border-l-4 px-6 md:p-12 mx-auto flex items-center flex-col gap-5 justify-center ">
             <form
-              className="flex flex-col md:w-3/5 mt-8 mx-auto items-center justify-center"
+              className="flex flex-col md:w-3/5 mt-8 mx-auto items-center justify-center dark:text-black"
               onSubmit={handleSubmit(onSubmit)}
             >
               {/* register your input into the hook by invoking the "register" function */}
               <input
-                className="w-full px-6 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]  "
+                className="w-full px-6 py-3 dark:bg-slate-200 placeholder:text-black bg-[rgba(142,110,53,.4)]  "
                 {...register("name", { required: true })}
                 placeholder="Enter Your Full Name"
               />
               <input
-                className="w-full px-6 mt-4 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]  "
+                className="w-full px-6 mt-4 py-3 dark:bg-slate-200 placeholder:text-black bg-[rgba(142,110,53,.4)]  "
                 {...register("email", { required: true })}
                 placeholder="Enter Your Email"
               />
@@ -116,14 +115,14 @@ const Signup = () => {
               {/* include validation with required or other standard HTML validation rules */}
               <div className="flex gap-3 justify-center items-center md:flex-row flex-col">
                 <input
-                  className="w-full px-6 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]"
+                  className="w-full px-6 dark:bg-slate-200 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]"
                   {...register("password", { required: true, minLength:6, pattern: /(?=.*[A-Z])(?=.*[!@#$&*])/ })}
                   placeholder="Enter Password"
                   type="text"
                 />
 
                 <input
-                  className="w-full px-6 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]"
+                  className="w-full px-6 dark:bg-slate-200 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]"
                   {...register("confirm_password", { required: true })}
                   placeholder="Confirm Password"
                   type="text"
@@ -133,11 +132,11 @@ const Signup = () => {
               {errors.exampleRequired && <span>This field is required</span>}
               <div className="flex gap-3 w-full items-center justify-center md:flex-row flex-col">
               <input
-                className="md:w-1/2 px-6 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]"
+                className="md:w-1/2 px-6 dark:bg-slate-200 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]"
                 {...register("phone", { required: true })}
                 placeholder="Enter Phone Number"
               />
-              <select className="md:w-1/2 w-full px-6 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]" {...register("gender")}>
+              <select className="md:w-1/2 dark:bg-slate-200 w-full px-6 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]" {...register("gender")}>
               <option value="">Select Gender</option>
                 <option value="female">female</option>
                 <option value="male">male</option>
@@ -145,13 +144,13 @@ const Signup = () => {
               </select>
               </div>
               <input
-                className="w-full px-6 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]"
+                className="w-full px-6 mt-5 dark:bg-slate-200 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]"
                 {...register("photo", { required: true })}
                 placeholder="Enter Photo Url"
               />
               
               <input
-                className="w-full px-6 mt-5 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]"
+                className="w-full px-6 mt-5 dark:bg-slate-200 py-3 placeholder:text-black bg-[rgba(142,110,53,.4)]"
                 {...register("address", { required: true })}
                 placeholder="Enter Address Info"
               />
@@ -163,19 +162,19 @@ const Signup = () => {
                 {/* <input className="button2" type="submit" value="Login" /> */}
                 <button
                   type="submit"
-                  className="button3 text-black bg-[#ECF8F9]"
+                  className={` ${authdark ? "darkbutton3" : "button3"}  text-black bg-[#ECF8F9]`}
                 >
                   SignUp
                 </button>
               </div>
             </form>
-            <p className="text-black text-lg">
+            <p className="text-black dark:text-slate-100 text-lg">
               Already have an accout? Please <Link className="text-green-700 font-bold" to="/login">
                 Login
               </Link>
             </p>
             <div className="parent-btn mx-auto">
-              <button onClick={handleGoogle} className="button3 flex items-center gap-3">
+              <button onClick={handleGoogle} className={` ${authdark ? "darkbutton3" : "button3"}  flex items-center gap-3`}>
                 <img className="h-6 w-6" alt="" src={google} /> Google Signup
               </button>
             </div>
