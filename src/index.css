@@ -199,12 +199,12 @@
 
 
 .page-header{
-  background-image: url(/src/assets/liquid-cheese1-svg.jpg);
+  background-image: url(assets/liquid-cheese1-svg.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 .dark-page-header{
-  background-image: url('/src/assets/liquid-cheese\(1\)-sortsvg.jpg');
+  background-image: url(assets/liquid-cheesedarksortsvg.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }

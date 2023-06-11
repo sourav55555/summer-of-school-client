@@ -12,4 +12,4 @@
 - React, Tailwind, DaisyUI, swiper for client side. Farmar-motion for animations, firebase for login/registration, Tanstack query, Axios
 - Express, JWT for server side
 
-Visit the live link  [Visit]()
+Visit the live link  [Visit](https://practice62-5.web.app)
