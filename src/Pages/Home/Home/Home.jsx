@@ -26,12 +26,14 @@ import WhyRegister from "../WhyRegister/WhyRegister";
 import useAuth from "../../../Hooks/useAuth";
 import { Link } from "react-router-dom";
 import Loader from "../../../Components/Loader/Loader";
+import Testimonials from "../../Testimonials/Testimonials";
+import About from "./About/About";
+import Events from "./Events/Events";
 
 
 const Home = () => {
 
   const {authdark} = useAuth();
-  console.log(authdark,"darks");
 
   return (
     <div className="dark:bg-[#061551] dark:text-white">
@@ -101,6 +103,9 @@ const Home = () => {
         </div>
       </div>
 
+      {/* about us  */}
+      <About/>
+
       {/* top classes  */}
       <TopClasses/>
 
@@ -109,6 +114,12 @@ const Home = () => {
 
       {/* why resgister  */}
       <WhyRegister/>
+
+      {/* events  */}
+      <Events/>
+
+      {/* testimonials */}
+      <Testimonials/>
 
     </div>
   );
